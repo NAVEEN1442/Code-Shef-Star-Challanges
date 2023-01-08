@@ -1,0 +1,28 @@
+About the problem :
+So, in this problem we have to  do the following steps:
+1.We gonna int 2 variables n and k.
+2.We gonna use a loop and input a number == n , ex:- if n = 3 then we gonna input 3 numbers.
+3.Then with the help of loop after taking a number as an input we gonna check if that number is divisible by k or not.
+4.If that number is divisible by k then we will increment "count" by 1.
+5.And in the final step we will output the value of count.
+
+
+#include<iostream>
+using namespace std;
+
+int main(){
+    int k;
+    int count=0;
+    int n;
+    cin>>n>>k;
+    int a[n];
+    for(int i=0;i<n;i++){
+        
+        cin>>a[i];
+        if(a[i]%k==0){
+        count++;
+        }
+    }
+    cout<<count<<endl;
+    return 0;
+}
