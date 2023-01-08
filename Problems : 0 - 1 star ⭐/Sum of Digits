@@ -1,0 +1,42 @@
+---------------------------------------------------------------***--------------------------------------------------------------------------
+In this problem we will be following the following steps:-
+
+1.We need to run the code for multiple test cases.Therefore,we gonna use a while loop to do so.
+2.Now we can take a variable num and store the value of the input for which we to print sum of digits.
+3.Now for ex: n is inputed as 123.
+4.So now we gonna use a while loop because we need to use sum the digits like if we have " 458 " as a number then we need to use sum operator 3 times.
+5.So if we use " num>0 " and continuesly decrement it it  will stops after the complete length of num is achieved.
+6.Now most important part:
+  1)We gonna take any random variable "s=0".
+  2)Now we can use one more variable "m" to store the value of num%10 which is its last value(remainder).
+  3)Here we took num =123 so m = 123%10 = 12.3 and 3 is stored in m as a remainder of num%10.
+  4)now we declared s=0 , so now s=s+m => s=0+3 => s=3;
+  5)now we can delete the last number of num bcz we we have added it by using num=num/10.
+  
+ 7.Now loop will continue till num's length.
+ 8.Finally we can output the value of s after the loop breaks out
+  
+---------------------------------------------------------------***--------------------------------------------------------------------------
+
+CODE :- 
+
+#include<iostream>
+using namespace std;
+
+int main(){
+    int testcase,num;
+    cin>>testcase;
+    while(testcase--){
+      cin>>num;
+      int s=0;
+      while(num>0){
+        int m=num%10;
+        s=s+m;
+        num=num/10;
+    }
+    
+    cout<<s<<endl;
+    }
+
+    return 0;
+}
