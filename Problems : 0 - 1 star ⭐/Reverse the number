@@ -1,0 +1,43 @@
+
+---------------------------------------------------------------***--------------------------------------------------------------------------
+In this problem we will be following the following steps:-
+
+1.We need to run the code for multiple test cases.Therefore,we gonna use a while loop to do so.
+2.Now we can take a variable num and store the value of the input for which we to print sum of digits.
+3.Now for ex: a is inputed as 123.
+4.So now we gonna use a while loop because we need to use reverse the digits like if we have " 458 " as a number then we need to use an operation 3times to reverse it.
+So if we use " a>0 " and continuesly decrement it it  will stops after the complete length of "a" is achieved.
+5.Now most important part:
+  1)We gonna take any random variable "c=0".
+  2)Now we can use one more variable "m" to store the value of num%10 which is its last value(remainder).
+  3)Here we took num =123 so m = 123%10 = 12.3 and 3 is stored in m as a remainder of num%10.
+  4)now we declared c=0 , so now c=0*10+3 => 3 [Next time it will be 3*10+2 =>32 then next loop it will become 321].
+  5)now we can delete the last number of num bcz we have added it by using num=num/10.
+  
+7.Now loop will continue till num's length.
+8.Finally we can output the value of "c" after the loop breaks out
+---------------------------------------------------------------***--------------------------------------------------------------------------
+
+CODE :- 
+
+#include<iostream>
+using namespace std;
+
+int main(){
+    int t;
+    cin>>t;
+    
+    while(t--){
+        int a;
+        cin>>a;
+        int c=0;
+        while(a>0){
+            int m=a%10;
+            c=c*10+m;
+            a=a/10;
+        }
+        cout<<c<<endl;
+    }
+
+    return 0;
+}
